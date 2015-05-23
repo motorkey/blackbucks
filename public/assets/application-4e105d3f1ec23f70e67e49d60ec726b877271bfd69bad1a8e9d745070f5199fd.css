@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* line 7, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+html, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 32, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+body {
+  line-height: 1;
+}
+
+/* line 35, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 38, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 46, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 50, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ---------- */
+/* line 57, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+html {
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* line 62, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+body {
+  position: relative;
+}
+
+/* line 65, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+h1 {
+  color: #ec0000;
+  font-size: 1.0em;
+  margin-left: 6px;
+  margin-bottom: 4px;
+  /*margin-top: 36px;*/
+}
+
+/* line 72, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 75, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+.fluid-img {
+  max-width: 96%;
+  margin-left: 6px;
+}
+
+/* line 79, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+.youtube {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 60.0%;
+}
+
+/* line 85, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* line 92, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#menu-icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  background-color: #000;
+  text-align: center;
+}
+/* line 102, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#menu-icon img {
+  display: inline-block;
+  width: 44px;
+  height: 38px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+  /* menuのheightとmenu-iconのheghtに連動して変更し、中央寄せになるようにせよ*/
+}
+
+/* line 111, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #cc0000;
+}
+/* line 123, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#menu #menu-links a {
+  display: block;
+  font-size: 56px;
+  padding: 25px 0;
+}
+/* line 127, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#menu #menu-links a:link, #menu #menu-links a:visited {
+  color: #000;
+  text-align: center;
+}
+/* line 131, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#menu #menu-links a:hover {
+  color: #fff;
+}
+
+@keyframes menu-in {
+  from {
+    transform: scale(1.6, 1.6);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes menu-in {
+  from {
+    -webkit-transform: scale(1.6, 1.6);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+@-moz-keyframe menu-in {
+  /* line 146, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+  from {
+    -moz-transform: scale(1.6, 1.6);
+  }
+
+  /* line 147, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+  to {
+    -moz-transform: scale(1, 1);
+  }
+}
+@keyframes menu-out {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.6, 1.6);
+  }
+}
+@-webkit-keyframes menu-out {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.6, 1.6);
+  }
+}
+@-moz-keyframes menu-out {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.6, 1.6);
+  }
+}
+@keyframes container-out {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(0.8, 0.8);
+  }
+}
+@keyframes container-in {
+  from {
+    transform: scale(0.8, 0.8);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+/* line 169, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+.page-title {
+  color: #ec0000;
+  font-size: 32px;
+  padding-left: 70px;
+  padding-top: 16px;
+  margin-bottom: 20px;
+}
+
+/*--- Home ---*/
+/* line 179, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#space {
+  width: 100%;
+  height: 65px;
+}
+
+/* line 183, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+.home-content {
+  margin-bottom: 30px;
+}
+
+/* line 186, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+#home-img, #home-20150506-pics {
+  max-width: 100%;
+}
+
+/* line 189, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+.space-bottom {
+  width: 100%;
+  height: 65px;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 195, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+  h1 {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* line 200, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+  .youtube {
+    margin-left: 16px;
+  }
+
+  /* line 203, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+  .page-title {
+    padding-left: 100px;
+  }
+
+  /*--- Home ---*/
+  /* line 208, /Users/Motoki/develop/blackbucks/app/assets/stylesheets/blackbucks.css.scss */
+  #home-img, #home-20150506-pics {
+    margin-left: 16px;
+  }
+}
+/*                                                                                                                       
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
