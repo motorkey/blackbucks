@@ -1,0 +1,2 @@
+module BlackbucksHelper
+end

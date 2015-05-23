@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title =@title
+    =stylesheet_link_tag 'application', media: "all", "data-turbolinks-track" => true
+    =javascript_include_tag 'application', "data-turbolinks-track" => true
+    =csrf_meta_tags
+  body
+    div#menu-icon
+      =image_tag("menu.png")
+    div#menu
+      div#menu-links
+        =link_to "Home", "home"
+        a.menu-item Match
+        a.menu-item Aquad
+        =link_to "About", "about"
+
+    =yield
